@@ -71,4 +71,15 @@ print("Standard Deviation of Sales:", std_dev)
 
 # our ouput MSE is significantly smaller than variance so our model is performing better 
 
+#based on individual spend on feature we can check the impact by coefficient and intercept
+
+oefficients = pd.DataFrame({
+    'Feature': ['TV', 'radio', 'newspaper'],
+    'Coefficient': model.coef_
+})
+
+print(coefficients)
+print("Intercept:", model.intercept_)
+
+#Impact - positive coeff impacts sales positively by increasing spend , negative coeff impact sales negatively by increasing spend
 #as next steps we can consider feature engineering and feature scaling to improve the model performance
